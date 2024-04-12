@@ -1,0 +1,44 @@
+﻿<Page x:Class="Converter.Pages.FromPDFWin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Converter.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="FromPDFWin">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Конвертер файлов" Foreground="White" FontSize="30" HorizontalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Выберите файл" Foreground="White" FontSize="14" Grid.ColumnSpan="3" Margin="442,0,438,27" Grid.RowSpan="2"/>
+        <TextBox Grid.Row="2" x:Name="txtPath" Margin="361,21,361,5" Grid.ColumnSpan="3"/>
+        <Button Grid.Row="3"  Content="Выбрать файл" Click="SelectFile_Click" HorizontalAlignment="Left" Width="92" Grid.ColumnSpan="3" Margin="454,0,0,0"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="5"  Content="Конвертировать в DOCX" Width="150" Click="ConvertToDoc_Click"/>
+            <Button Margin="5"  Content="Конвертировать в XLSX" Width="150"/>
+            <Button Margin="5"  Content="Конвертировать в PPTX" Width="150"/>
+        
+            <Button Margin="5"  Content="Конвертировать в ODT" Width="150"/>
+            <Button Margin="5"  Content="Конвертировать в ODS" Width="150"/>
+            <Button Margin="5"  Content="Конвертировать в ODP" Width="150"/>
+        </StackPanel>
+    </Grid>
+</Page>
